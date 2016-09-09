@@ -1,0 +1,57 @@
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| todos_list         |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use todos_list
+Database changed
+mysql> show tables from todos_list
+    -> ;
++----------------------+
+| Tables_in_todos_list |
++----------------------+
+| todo                 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> show columns from todo;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(60)      | YES  |     | NULL    |                |
+| done  | tinyint(1)       | YES  |     | 0       |                |
++-------+------------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from todo;
++----+-------------------+------+
+| id | name              | done |
++----+-------------------+------+
+|  1 | alarm bell        |    0 |
+|  2 | wake up           |    0 |
+|  3 | Take a shower     |    0 |
+|  4 | eat breakfast     |    0 |
+|  5 | go to work        |    0 |
+|  6 | do the tasks      |    0 |
+|  7 | finished the work |    0 |
+|  8 | back to home      |    0 |
+|  9 | take rest         |    0 |
+| 10 | eat the dinner    |    0 |
+| 11 | watch tv          |    0 |
+| 12 | go to bed         |    0 |
++----+-------------------+------+
+12 rows in set (0.00 sec)
+
+mysql>
